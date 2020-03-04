@@ -1,0 +1,28 @@
+1582789354429	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewqDZwF"
+1582789359343	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1582789360772	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1582789360772	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1582789360772	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1582789360773	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1582789366729	Marionette	INFO	Listening on port 37889
+1582789366773	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: Property 'handleEvent' is not callable.
+JavaScript error: , line 0: TypeError: Property 'handleEvent' is not callable.
+JavaScript error: , line 0: TypeError: Property 'handleEvent' is not callable.
+JavaScript error: , line 0: TypeError: Property 'handleEvent' is not callable.
+JavaScript error: https://static-p3-live.s3.ap-south-1.amazonaws.com/js/ext_lib_non_blocking_v0.0.0.3.min.js, line 1: TypeError: r[0] is undefined
+1582789606722	Marionette	INFO	Stopped listening on port 37889
+1582789654393	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileXfXtDP"
+1582789655161	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1582789656270	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1582789656270	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1582789656270	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1582789656271	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1582789659170	Marionette	INFO	Listening on port 46053
+1582789659207	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: Property 'handleEvent' is not callable.
+JavaScript error: , line 0: TypeError: Property 'handleEvent' is not callable.
+JavaScript error: , line 0: TypeError: Property 'handleEvent' is not callable.
+JavaScript error: , line 0: TypeError: Property 'handleEvent' is not callable.
+JavaScript error: https://static-p3-live.s3.ap-south-1.amazonaws.com/js/ext_lib_non_blocking_v0.0.0.3.min.js, line 1: TypeError: r[0] is undefined
+1582796234916	Marionette	INFO	Stopped listening on port 46053
