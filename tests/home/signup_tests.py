@@ -12,7 +12,12 @@ class SignupTests():
         driver.get(baseURL)
 
         signupLink = driver.find_element(By.CSS_SELECTOR, value="#user-register")
+        #loginlink = driver.find_element(By.XPATH, value="//*[@id='enduser_auth_wrap']//a[@id='user-login']")
         signupLink.click()
+        #loginlink.click()
+
+        #driver.find_element(By.XPATH, value="//input[@id='login_id_email']").send_keys("abcd@test.com")
+        driver.find_element(By.CSS_SELECTOR, value="#login_id_email").send_keys("abcd@test.com")
 
         # Signup form data
         firstName = driver.find_element(By.CSS_SELECTOR, value="#id_firstname")
