@@ -1,6 +1,6 @@
 from selenium import webdriver
 from pages.home.login_page import LoginPage
-from pages.home.header_page import HeaderPage
+from pages.home.LHS_page import lhsPage
 from utilities.test_status import TestStatus
 from utilities.read_data import getCSVData
 import unittest
@@ -17,15 +17,18 @@ class LoginTests(unittest.TestCase):
     def classSetup(self, oneTimeSetUp):
         self.lp = LoginPage(self.driver)
         self.ts = TestStatus(self.driver)
-        self.header = HeaderPage(self.driver)
+        self.header = lhsPage(self.driver)
 
 
     @pytest.mark.tryfirst
     def test_invalidLogin(self):
-        self.lp.login(email="", password="")
-
         result1 = self.lp.verify_Login_title()
         self.ts.mark(result1, "Title is incorrect")
+
+        self.lp.logout()
+        self.lp.login(email="", password="")
+
+
 
         result2 = self.lp.verify_login_fail()
         self.ts.markFinal("test invalid login", result2, "Invalid login fails")
@@ -42,9 +45,6 @@ class LoginTests(unittest.TestCase):
 
         result2 = self.lp.verify_login_success()
 
-        time.sleep(1)
-        self.header.click_user_menu()
-        time.sleep(1)
-        self.header.click_logout()
+
         time.sleep(5)
-        self.ts.markFinal("test valid login", result2, "Login successfully")
+        self.ts.markFinal("test valid login", result2, "Login not successfully")

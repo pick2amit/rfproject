@@ -12,15 +12,16 @@ class LoginPage(BasePage):
         super().__init__(driver)
         self.driver = driver
     # Locators
-    _login_link = "//*[@id='enduser_auth_wrap']//a[@id='user-login']"
-    _login_link2 = "//div[@class='enduser-login text-right ng-scope']//a[@id='user-login']"
-    _login_email = "//input[@id='login_id_email']"
-    _login_password = "//input[@id='login_id_password']"
-    _login_button = "//button[@class='theme-btn theme-btn-solid login-btn']"
+    _login_link = "//a[@class='js-login-trigger']"
+    _login_email = "//input[@id='id_login_username']"
+    _login_password = "//input[@id='id_login_password']"
+    _login_button = "//input[@id='submit']"
 
-    _logout_link = "//a[@class='secondary-link'][contains(text(),'Logout')]"
-    _login_error = "//label[@id='login_id_email-error']"
-    _about_link = "//a[@class='primary-link'][contains(text(),'About')]"
+    _overlay_popup_id = "overlayPopup"
+    _cross_icon = "//div[@class='subscription-popup-background soft-double--bottom']//div//i[@class='micon micon-cross-white']"
+
+    _profile_menu = "//a[contains(@class,'show-for-medium-up push-half--left')]"
+    _logout_link = "//a[text()='Log Out']"
 
     # By defaults we use locatorType="xpath", specify it if u use any other
 
@@ -36,6 +37,12 @@ class LoginPage(BasePage):
     def click_loginbtn(self):
         self.elementClick(self._login_button)
 
+    def click_profileMenu(self):
+        self.elementClick(self._profile_menu)
+
+    def click_logout(self):
+        self.elementClick(self._logout_link)
+
 
     def login(self, email, password):
         self.click_login_link()
@@ -43,6 +50,10 @@ class LoginPage(BasePage):
         self.enter_password(password)
         self.click_loginbtn()
         time.sleep(3)
+
+    def logout(self):
+        self.click_profileMenu()
+        self.click_logout()
 
     def verify_login_success(self):
         # If logout link is present that means user login successfully
@@ -53,4 +64,4 @@ class LoginPage(BasePage):
         return self.isElementPresent(self._login_error)
 
     def verify_Login_title(self):
-        return self.verifyPageTitle("test6november")
+        return self.verifyPageTitle("dashboard")

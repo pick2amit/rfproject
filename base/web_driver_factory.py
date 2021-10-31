@@ -7,7 +7,7 @@ class WebDriverFactory():
         self.osType = osType
 
     def getWebDriverInstance(self):
-        baseURL = "http://test6nov.gmastesttest.com/"
+        baseURL = "https://staging.instamojo.com/"
 
         if self.browser.lower() == "chrome":
             driver = webdriver.Chrome(
